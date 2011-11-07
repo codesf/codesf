@@ -1,0 +1,29 @@
+<h1>Listing caves</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Hours</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @caves.each do |cafe| %>
+  <tr>
+    <td><%= cafe.name %></td>
+    <td><%= cafe.location %></td>
+    <td><%= cafe.hours %></td>
+    <td><%= cafe.description %></td>
+    <td><%= link_to 'Show', cafe %></td>
+    <td><%= link_to 'Edit', edit_cafe_path(cafe) %></td>
+    <td><%= link_to 'Destroy', cafe, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cafe', new_cafe_path %>

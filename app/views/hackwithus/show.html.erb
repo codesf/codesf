@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @hackwithu.name %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @hackwithu.date %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @hackwithu.location %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @hackwithu.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_hackwithu_path(@hackwithu) %> |
+<%= link_to 'Back', hackwithus_path %>

@@ -1,0 +1,29 @@
+<h1>Listing hackwithus</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Location</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hackwithus.each do |hackwithu| %>
+  <tr>
+    <td><%= hackwithu.name %></td>
+    <td><%= hackwithu.date %></td>
+    <td><%= hackwithu.location %></td>
+    <td><%= hackwithu.description %></td>
+    <td><%= link_to 'Show', hackwithu %></td>
+    <td><%= link_to 'Edit', edit_hackwithu_path(hackwithu) %></td>
+    <td><%= link_to 'Destroy', hackwithu, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hackwithu', new_hackwithu_path %>
