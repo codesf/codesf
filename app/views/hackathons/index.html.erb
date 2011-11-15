@@ -4,8 +4,10 @@
   <tr>
     <th>Name</th>
     <th>Date</th>
+    <th>Hours</th>
+    <th>Website</th>
     <th>Location</th>
-    <th>Description</th>
+    <th>Info</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,11 +17,13 @@
   <tr>
     <td><%= hackathon.name %></td>
     <td><%= hackathon.date %></td>
+    <td><%= hackathon.hours %></td>
+    <td><%= hackathon.website %></td>
     <td><%= hackathon.location %></td>
-    <td><%= hackathon.description %></td>
+    <td><%= hackathon.info %></td>
     <td><%= link_to 'Show', hackathon %></td>
     <td><%= link_to 'Edit', edit_hackathon_path(hackathon) %></td>
-    <td><%= link_to 'Destroy', hackathon, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', hackathon, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

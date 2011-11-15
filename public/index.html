@@ -1,26 +1,184 @@
-<!DOCTYPE html>
+
 <html>
-  <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
+
+<head>
+  <script type="text/javascript" src="script/jquery-1.5.1.min.js"></script>
+  <script type="text/javascript" src="script/main.js"></script>
+<script type="text/javascript" src="script/jquery.idTabs.min.js"></script>
+  <style type="text/css">
+    body {
         margin: 0;
         margin-bottom: 25px;
         padding: 0;
-        background-color: #f0f0f0;
+        background-color: #000000;
         font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
+        font-size: 14px;
+        color: #00FF00;
+      }
+      div#container{
+        width:100%;
+      }
+      ul
+      {
+        list-style-type: none;
+      }
+      h1
+      {
+        color:fff;
       }
       a  {
-        color: #03c
+        color: #03c;
+      }
+      a:visited {
+        color:fff;
+        font-size:14;
+        text-decoration: none;
       }
       a:hover {
         background-color: #03c;
         color: white;
         text-decoration: none;
       }
+      a:link {
+        font-size:14;
+        color:fff;
+        text-decoration: none;
+      }
+     div.header{
+        padding-left:35px;
+        padding-top:20px;
+     }
+     div.nav{
+        padding-top:20px;
+        float:left;
+        margin: 0 auto;
+        width: 16%;
+        height:400;
+     }
+     div.main{
+        float:left;
+        position:relative;
+        width:80%;
+    }
+    div.footer{
+        float:left;
+        position:relative;
+        width:90%;
+        color:fff;
+        font-size:16;
+        padding-left:110;
+        padding-top:60px;
+    }
     </style>
-    <span style="position:fixed">codesf<br>coming soon...</span>
-  </body>
+    <title>CodeSF</title>
+</head>
+<body>
+<div id="container">
+<div class="header">
+<h1>CodeSF</h1>
+</div>
+<div id="tabmenu" class="tabmenu nav">
+<ul><b>
+<li><a href="#hello">hello/</a></li>
+<li><a href="#where">where_to_code/</a></li>
+<li><a href="#makeateam">make_a_team/</a></li>
+<li><a href="#challenge">submit_a_challenge/</a></li>
+<li><a href="#teach">teach/</a><li>
+<li><a href="#learn">learn/</a><li>
+<li><a href="http://www.codesf.org/forums">forums/</a></li>
+<li><a href="#projects">our_projects/</a></li>
+<li><a href="#team">team/</a></li>
+</b></ul>
+</div>
+<div id="hello" class="main">
+
+<h1>hello/</h1><b>
+      Find events, build teams, learn and contribute your own code back. Let's build upon the already thriving San Francisco Bay Area community!<br><br>We're here to encourage projects that give back to the community by enabling the formation of teams, and submission of individual challenges or obstacles projects wish to overcome.
+      <br><br> If you want to contribute to our project keep in touch, here's some upcoming events from us where you can get involved.<br> 
+<br>Thank You, and happy hacking<br><span style="color:FF6600;">-CodeSF team</span><br><br>
+      <span style="color:FF6600;">Weekly Pizza Computer Time.</span><br> Where: <a href="https://www.noisebridge.net">NoiseBridge Hackerspace</a> 2169 Mission Street, San Francisco, CA. <br>When:Sundays @ 2pm<br>What<: We meet up, bring some food and hack on projects. The location may change soon so please check back<br><br>
+      <span style="color:FF6600;">Hackathons:</span>
+      We're planning a hackathon and looking for partners from the Open Source. The event will be a place for coders to come together and dedicate some time to working on Open Source, or Non-Profit related projects. If your organization has an interest in such an event please contact us. We're looking for a host and energetic people to present their projects. codesfteam a7 gmail.com</b>
+</div>
+<div id="where" class="main">
+ <div id="tabmenu2" class="tabmenu2 nav">
+<ul><b>
+<li><a href="#hackerspaces">hackerspaces/</a></li>
+<li><a href="#cafes">cafes/</a></li>
+<li><a href="#cons">cons/</a></li>
+<li><a href="#hackathons">hackathons/</a></li>
+<li><a href="#meetups">meetups/</a></li>
+<li><a href="#nonprofit">non-profits/</a></li>
+<li><a href="#adventure">adventure/</a></li>
+</b></ul>
+</div>
+<div id="hackerspaces" class="main">
+<object data="data/hackerspaces.html" type="text/html" width="910" height="650"></object>
+</div>
+<div id="cafes" class="main" style="background-color:fff;">
+  <object data="data/cafes.html" type="text/html" width="910" height="650"></object>
+</div>
+<div id="hackathons" class="main">
+SHDH
+<? php 
+include('module.php');
+?>
+</div>
+<div id="meetups" class="main">
+python meet up
+</div>
+<div id="nonprofit" class="main">
+EFF
+</div>
+<div id="adventure" class="main">
+WEEEEE
+</div>
+</div>
+<div id="makeateam" class="main">
+  <h1>make a team</h1>
+  Here you can form a team for yourself for a specific programming language or project<br>
+  The one request is that your code be open source, and you list it on the site, and possibly host open meetings. <br>
+  Would love to have some community communication features. For instance http://www.codesf.org/group/perl and then you 
+  enter a passphrase, and you have a community board for the project.
+</div>
+<div id="challenge" class="main">
+  <h1>submit a challenge</h1>
+  Here opensource companies can submit challenges, for instance Hack this into our API or Fix this bug I am having<br><br>
+  Would love to integrate Evan's rating system into this portion, so people can rate the importance of a project. <br>
+  Also there may be option to give rewards.
+</div>
+<div id="teach" class="main">
+<h1>Teach</h1>
+Here's where you can sign up as a teacher, crowd sourced...
+</div>
+<div id="learn" class="main">
+<h1>Learn</h1>
+Here's where you can sign up for a class from random teacher...
+</div>
+<div id="projects" class="main">
+  <h1>our projects</h1>
+      <a href="http://www.github.com/codesf/codesf">CodeSF on github</a><br><br>
+      Here members can list any external projects they have.
+</div>
+<div id="team" class="main">
+  <h1>Team</h1>
+  <ul><b>
+    <li>Dan: sytem adminstrator</li>
+    <li>Gavin: front-end web-developer</li>
+    </b>
+  </ul>
+  <br>Here we list who we are and blurb about our specialties, and whatever else.
+</div><br>
+<div class="footer">  
+<br>
+<b>Donate</b>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+  $("#tabmenu ul").idTabs("hello");
+</script>
+<script type="text/javascript">
+  $("#tabmenu2 ul").idTabs("hackerspaces");
+</script>
 </html>

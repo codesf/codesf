@@ -6,7 +6,7 @@ class HackathonsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render :json => @hackathons }
+      format.json { render json: @hackathons }
     end
   end
 
@@ -17,7 +17,7 @@ class HackathonsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render :json => @hackathon }
+      format.json { render json: @hackathon }
     end
   end
 
@@ -28,7 +28,7 @@ class HackathonsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render :json => @hackathon }
+      format.json { render json: @hackathon }
     end
   end
 
@@ -44,11 +44,11 @@ class HackathonsController < ApplicationController
 
     respond_to do |format|
       if @hackathon.save
-        format.html { redirect_to @hackathon, :notice => 'Hackathon was successfully created.' }
-        format.json { render :json => @hackathon, :status => :created, :location => @hackathon }
+        format.html { redirect_to @hackathon, notice: 'Hackathon was successfully created.' }
+        format.json { render json: @hackathon, status: :created, location: @hackathon }
       else
-        format.html { render :action => "new" }
-        format.json { render :json => @hackathon.errors, :status => :unprocessable_entity }
+        format.html { render action: "new" }
+        format.json { render json: @hackathon.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -60,11 +60,11 @@ class HackathonsController < ApplicationController
 
     respond_to do |format|
       if @hackathon.update_attributes(params[:hackathon])
-        format.html { redirect_to @hackathon, :notice => 'Hackathon was successfully updated.' }
+        format.html { redirect_to @hackathon, notice: 'Hackathon was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render :action => "edit" }
-        format.json { render :json => @hackathon.errors, :status => :unprocessable_entity }
+        format.html { render action: "edit" }
+        format.json { render json: @hackathon.errors, status: :unprocessable_entity }
       end
     end
   end

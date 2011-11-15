@@ -1,0 +1,29 @@
+<h1>Listing nonprofits</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Website</th>
+    <th>Location</th>
+    <th>Info</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @nonprofits.each do |nonprofit| %>
+  <tr>
+    <td><%= nonprofit.name %></td>
+    <td><%= nonprofit.website %></td>
+    <td><%= nonprofit.location %></td>
+    <td><%= nonprofit.info %></td>
+    <td><%= link_to 'Show', nonprofit %></td>
+    <td><%= link_to 'Edit', edit_nonprofit_path(nonprofit) %></td>
+    <td><%= link_to 'Destroy', nonprofit, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Nonprofit', new_nonprofit_path %>

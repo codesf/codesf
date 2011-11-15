@@ -1,0 +1,35 @@
+<h1>Listing hackerspaces</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Website</th>
+    <th>Address</th>
+    <th>Cost</th>
+    <th>Phone</th>
+    <th>Hours</th>
+    <th>Info</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hackerspaces.each do |hackerspace| %>
+  <tr>
+    <td><%= hackerspace.name %></td>
+    <td><%= hackerspace.website %></td>
+    <td><%= hackerspace.address %></td>
+    <td><%= hackerspace.cost %></td>
+    <td><%= hackerspace.phone %></td>
+    <td><%= hackerspace.hours %></td>
+    <td><%= hackerspace.info %></td>
+    <td><%= link_to 'Show', hackerspace %></td>
+    <td><%= link_to 'Edit', edit_hackerspace_path(hackerspace) %></td>
+    <td><%= link_to 'Destroy', hackerspace, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hackerspace', new_hackerspace_path %>

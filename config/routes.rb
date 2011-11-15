@@ -1,13 +1,31 @@
 Codesf::Application.routes.draw do
-  resources :abouts
-
-  resources :hackwithus
-
-  resources :projects
-
   resources :caves
 
   resources :hackathons
+
+  resources :cons
+
+  resources :hackerspaces
+
+  resources :homes
+
+  resources :ourprojects
+
+  resources :learns
+
+  resources :teaches
+
+  resources :challenges
+
+  resources :makeateams
+
+  resources :teams
+
+  resources :adventures
+
+  resources :nonprofits
+
+  resources :meetups
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

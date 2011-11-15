@@ -6,7 +6,7 @@ class CavesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render :json => @caves }
+      format.json { render json: @caves }
     end
   end
 
@@ -17,7 +17,7 @@ class CavesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render :json => @cafe }
+      format.json { render json: @cafe }
     end
   end
 
@@ -28,7 +28,7 @@ class CavesController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render :json => @cafe }
+      format.json { render json: @cafe }
     end
   end
 
@@ -44,11 +44,11 @@ class CavesController < ApplicationController
 
     respond_to do |format|
       if @cafe.save
-        format.html { redirect_to @cafe, :notice => 'Cafe was successfully created.' }
-        format.json { render :json => @cafe, :status => :created, :location => @cafe }
+        format.html { redirect_to @cafe, notice: 'Cafe was successfully created.' }
+        format.json { render json: @cafe, status: :created, location: @cafe }
       else
-        format.html { render :action => "new" }
-        format.json { render :json => @cafe.errors, :status => :unprocessable_entity }
+        format.html { render action: "new" }
+        format.json { render json: @cafe.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -60,11 +60,11 @@ class CavesController < ApplicationController
 
     respond_to do |format|
       if @cafe.update_attributes(params[:cafe])
-        format.html { redirect_to @cafe, :notice => 'Cafe was successfully updated.' }
+        format.html { redirect_to @cafe, notice: 'Cafe was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render :action => "edit" }
-        format.json { render :json => @cafe.errors, :status => :unprocessable_entity }
+        format.html { render action: "edit" }
+        format.json { render json: @cafe.errors, status: :unprocessable_entity }
       end
     end
   end

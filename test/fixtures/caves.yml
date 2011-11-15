@@ -2,12 +2,16 @@
 
 one:
   name: MyString
-  location: MyString
+  address: MyString
+  cost: MyString
+  food: MyString
   hours: MyString
-  description: MyText
+  info: MyText
 
 two:
   name: MyString
-  location: MyString
+  address: MyString
+  cost: MyString
+  food: MyString
   hours: MyString
-  description: MyText
+  info: MyText

@@ -1,0 +1,2 @@
+module HackerspacesHelper
+end

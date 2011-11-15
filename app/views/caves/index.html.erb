@@ -3,9 +3,11 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Location</th>
+    <th>Address</th>
+    <th>Cost</th>
+    <th>Food</th>
     <th>Hours</th>
-    <th>Description</th>
+    <th>Info</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,12 +16,14 @@
 <% @caves.each do |cafe| %>
   <tr>
     <td><%= cafe.name %></td>
-    <td><%= cafe.location %></td>
+    <td><%= cafe.address %></td>
+    <td><%= cafe.cost %></td>
+    <td><%= cafe.food %></td>
     <td><%= cafe.hours %></td>
-    <td><%= cafe.description %></td>
+    <td><%= cafe.info %></td>
     <td><%= link_to 'Show', cafe %></td>
     <td><%= link_to 'Edit', edit_cafe_path(cafe) %></td>
-    <td><%= link_to 'Destroy', cafe, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', cafe, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

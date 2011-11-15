@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @con.name %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @con.website %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @con.date %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @con.location %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%= @con.info %>
+</p>
+
+
+<%= link_to 'Edit', edit_con_path(@con) %> |
+<%= link_to 'Back', cons_path %>

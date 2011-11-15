@@ -1,0 +1,33 @@
+<h1>Listing meetups</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Hours</th>
+    <th>Website</th>
+    <th>Location</th>
+    <th>Info</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @meetups.each do |meetup| %>
+  <tr>
+    <td><%= meetup.name %></td>
+    <td><%= meetup.date %></td>
+    <td><%= meetup.hours %></td>
+    <td><%= meetup.website %></td>
+    <td><%= meetup.location %></td>
+    <td><%= meetup.info %></td>
+    <td><%= link_to 'Show', meetup %></td>
+    <td><%= link_to 'Edit', edit_meetup_path(meetup) %></td>
+    <td><%= link_to 'Destroy', meetup, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Meetup', new_meetup_path %>

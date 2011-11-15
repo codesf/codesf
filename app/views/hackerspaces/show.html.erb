@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @hackerspace.name %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @hackerspace.website %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @hackerspace.address %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%= @hackerspace.cost %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @hackerspace.phone %>
+</p>
+
+<p>
+  <b>Hours:</b>
+  <%= @hackerspace.hours %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%= @hackerspace.info %>
+</p>
+
+
+<%= link_to 'Edit', edit_hackerspace_path(@hackerspace) %> |
+<%= link_to 'Back', hackerspaces_path %>

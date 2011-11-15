@@ -1,0 +1,23 @@
+<h1>Listing learns</h1>
+
+<table>
+  <tr>
+    <th>Info</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @learns.each do |learn| %>
+  <tr>
+    <td><%= learn.info %></td>
+    <td><%= link_to 'Show', learn %></td>
+    <td><%= link_to 'Edit', edit_learn_path(learn) %></td>
+    <td><%= link_to 'Destroy', learn, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Learn', new_learn_path %>

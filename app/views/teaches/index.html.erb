@@ -1,0 +1,23 @@
+<h1>Listing teaches</h1>
+
+<table>
+  <tr>
+    <th>Info</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @teaches.each do |teach| %>
+  <tr>
+    <td><%= teach.info %></td>
+    <td><%= link_to 'Show', teach %></td>
+    <td><%= link_to 'Edit', edit_teach_path(teach) %></td>
+    <td><%= link_to 'Destroy', teach, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Teach', new_teach_path %>

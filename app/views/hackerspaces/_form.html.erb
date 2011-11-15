@@ -1,0 +1,45 @@
+<%= form_for(@hackerspace) do |f| %>
+  <% if @hackerspace.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hackerspace.errors.count, "error") %> prohibited this hackerspace from being saved:</h2>
+
+      <ul>
+      <% @hackerspace.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br />
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :cost %><br />
+    <%= f.text_field :cost %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :hours %><br />
+    <%= f.text_field :hours %>
+  </div>
+  <div class="field">
+    <%= f.label :info %><br />
+    <%= f.text_area :info %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

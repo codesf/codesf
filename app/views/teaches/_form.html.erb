@@ -1,0 +1,21 @@
+<%= form_for(@teach) do |f| %>
+  <% if @teach.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@teach.errors.count, "error") %> prohibited this teach from being saved:</h2>
+
+      <ul>
+      <% @teach.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :info %><br />
+    <%= f.text_area :info %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

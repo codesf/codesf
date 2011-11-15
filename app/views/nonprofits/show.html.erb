@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @nonprofit.name %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @nonprofit.website %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @nonprofit.location %>
+</p>
+
+<p>
+  <b>Info:</b>
+  <%= @nonprofit.info %>
+</p>
+
+
+<%= link_to 'Edit', edit_nonprofit_path(@nonprofit) %> |
+<%= link_to 'Back', nonprofits_path %>
