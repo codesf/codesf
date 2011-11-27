@@ -1,6 +1,4 @@
 Codesf::Application.routes.draw do
-  resources :caves
-
   resources :hackathons
 
   resources :cons
